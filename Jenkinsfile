@@ -1,5 +1,13 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'postman/newman:alpine'
+      args '-v $WORKSPACE:/etc/newman'
+    }
+  }
+  ...
+}
+
 
   stages {
     stage('Build') {
