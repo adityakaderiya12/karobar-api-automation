@@ -5,7 +5,6 @@ pipeline {
       args '-v $WORKSPACE:/etc/newman'
     }
   }
-  ...
 }
 
 
